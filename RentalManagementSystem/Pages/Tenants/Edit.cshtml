@@ -1,0 +1,85 @@
+﻿@page
+@model RentalManagementSystem.Pages.Tenants.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Tenant</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Tenant.Name" class="control-label"></label>
+                <input asp-for="Tenant.Name" class="form-control" />
+                <span asp-validation-for="Tenant.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenant.Phone" class="control-label"></label>
+                <input asp-for="Tenant.Phone" class="form-control" />
+                <span asp-validation-for="Tenant.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenant.Description" class="control-label"></label>
+                <input asp-for="Tenant.Description" class="form-control" />
+                <span asp-validation-for="Tenant.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenant.Email" class="control-label"></label>
+                <input asp-for="Tenant.Email" class="form-control" />
+                <span asp-validation-for="Tenant.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Tenant.IsActive" /> @Html.DisplayNameFor(model => model.Tenant.IsActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenant.BuildingId" class="control-label"></label>
+                <select asp-for="Tenant.BuildingId" class="form-control" asp-items="ViewBag.BuildingId"></select>
+                <span asp-validation-for="Tenant.BuildingId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenant.FlatId" class="control-label"></label>
+                <input asp-for="Tenant.FlatId" class="form-control" />
+                <span asp-validation-for="Tenant.FlatId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenant.RoomId" class="control-label"></label>
+                <input asp-for="Tenant.RoomId" class="form-control" />
+                <span asp-validation-for="Tenant.RoomId" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Tenant.Id" />
+            <div class="form-group">
+                <label asp-for="Tenant.CreatedAt" class="control-label"></label>
+                <input asp-for="Tenant.CreatedAt" class="form-control" />
+                <span asp-validation-for="Tenant.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenant.UpdatedAt" class="control-label"></label>
+                <input asp-for="Tenant.UpdatedAt" class="form-control" />
+                <span asp-validation-for="Tenant.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenant.CreatedBy" class="control-label"></label>
+                <input asp-for="Tenant.CreatedBy" class="form-control" />
+                <span asp-validation-for="Tenant.CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

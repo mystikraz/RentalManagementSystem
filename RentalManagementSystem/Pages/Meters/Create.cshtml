@@ -1,0 +1,54 @@
+﻿@page
+@model RentalManagementSystem.Pages.Meters.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Meter</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Meter.Name" class="control-label"></label>
+                <input asp-for="Meter.Name" class="form-control" />
+                <span asp-validation-for="Meter.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meter.Number" class="control-label"></label>
+                <input asp-for="Meter.Number" class="form-control" />
+                <span asp-validation-for="Meter.Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meter.Description" class="control-label"></label>
+                <input asp-for="Meter.Description" class="form-control" />
+                <span asp-validation-for="Meter.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meter.Reading" class="control-label"></label>
+                <input asp-for="Meter.Reading" class="form-control" />
+                <span asp-validation-for="Meter.Reading" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meter.Rate" class="control-label"></label>
+                <input asp-for="Meter.Rate" class="form-control" />
+                <span asp-validation-for="Meter.Rate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,75 @@
+﻿@page
+@model RentalManagementSystem.Pages.Rooms.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Room</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Room.Name" class="control-label"></label>
+                <input asp-for="Room.Name" class="form-control" />
+                <span asp-validation-for="Room.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.Number" class="control-label"></label>
+                <input asp-for="Room.Number" class="form-control" />
+                <span asp-validation-for="Room.Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.Description" class="control-label"></label>
+                <input asp-for="Room.Description" class="form-control" />
+                <span asp-validation-for="Room.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.Rate" class="control-label"></label>
+                <input asp-for="Room.Rate" class="form-control" />
+                <span asp-validation-for="Room.Rate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.FlatId" class="control-label"></label>
+                <select asp-for="Room.FlatId" class="form-control" asp-items="ViewBag.FlatId"></select>
+                <span asp-validation-for="Room.FlatId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.SubMeterId" class="control-label"></label>
+                <select asp-for="Room.SubMeterId" class="form-control" asp-items="ViewBag.SubMeterId"></select>
+                <span asp-validation-for="Room.SubMeterId" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Room.Id" />
+            <div class="form-group">
+                <label asp-for="Room.CreatedAt" class="control-label"></label>
+                <input asp-for="Room.CreatedAt" class="form-control" />
+                <span asp-validation-for="Room.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.UpdatedAt" class="control-label"></label>
+                <input asp-for="Room.UpdatedAt" class="form-control" />
+                <span asp-validation-for="Room.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.CreatedBy" class="control-label"></label>
+                <input asp-for="Room.CreatedBy" class="form-control" />
+                <span asp-validation-for="Room.CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

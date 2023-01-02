@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalManagementSystem", "RentalManagementSystem\RentalManagementSystem.csproj", "{65A8D4BE-C869-4AD0-A677-E694491230BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{D73676A6-2C06-4637-BA55-9A86AF20084B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{58C07A49-EFE4-4515-92D2-6F47E47F3D09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65A8D4BE-C869-4AD0-A677-E694491230BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A8D4BE-C869-4AD0-A677-E694491230BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A8D4BE-C869-4AD0-A677-E694491230BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A8D4BE-C869-4AD0-A677-E694491230BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C07A49-EFE4-4515-92D2-6F47E47F3D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C07A49-EFE4-4515-92D2-6F47E47F3D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C07A49-EFE4-4515-92D2-6F47E47F3D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C07A49-EFE4-4515-92D2-6F47E47F3D09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58C07A49-EFE4-4515-92D2-6F47E47F3D09} = {D73676A6-2C06-4637-BA55-9A86AF20084B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7272EB32-E73C-49C0-B1F3-EFC6B9B26199}
+	EndGlobalSection
+EndGlobal
